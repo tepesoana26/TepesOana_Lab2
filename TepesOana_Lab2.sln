@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TepesOana_Lab2", "TepesOana_Lab2\TepesOana_Lab2.csproj", "{D41051C7-EF45-4C0B-B4A8-67A6B95905DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TepesOana_Lab2", "TepesOana_Lab2\TepesOana_Lab2.csproj", "{D41051C7-EF45-4C0B-B4A8-67A6B95905DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryModel", "LibraryModel\LibraryModel.csproj", "{33F679A3-3C28-42BA-9781-8EF8DD17B8C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWebAPI", "LibraryWebAPI\LibraryWebAPI.csproj", "{9E2C862C-8FCF-49AF-B968-5F563D5707E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D41051C7-EF45-4C0B-B4A8-67A6B95905DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D41051C7-EF45-4C0B-B4A8-67A6B95905DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D41051C7-EF45-4C0B-B4A8-67A6B95905DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F679A3-3C28-42BA-9781-8EF8DD17B8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F679A3-3C28-42BA-9781-8EF8DD17B8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F679A3-3C28-42BA-9781-8EF8DD17B8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F679A3-3C28-42BA-9781-8EF8DD17B8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2C862C-8FCF-49AF-B968-5F563D5707E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2C862C-8FCF-49AF-B968-5F563D5707E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2C862C-8FCF-49AF-B968-5F563D5707E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2C862C-8FCF-49AF-B968-5F563D5707E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

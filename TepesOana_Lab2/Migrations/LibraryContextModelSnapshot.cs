@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TepesOana_Lab2.Data;
+using LibraryModel.Data;
+using LibraryModel.Models;
 
 namespace TepesOana_Lab2.Migrations
 {
@@ -19,7 +20,7 @@ namespace TepesOana_Lab2.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.Book", b =>
+            modelBuilder.Entity("LibraryModel.Models.Book", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -40,7 +41,7 @@ namespace TepesOana_Lab2.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.Customer", b =>
+            modelBuilder.Entity("LibraryModel.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
                         .HasColumnType("int");
@@ -59,7 +60,7 @@ namespace TepesOana_Lab2.Migrations
                     b.ToTable("Book");
                 });
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.Order", b =>
+            modelBuilder.Entity("LibraryModel.Models.Order", b =>
                 {
                     b.Property<int>("OrderID")
                         .ValueGeneratedOnAdd()
@@ -84,7 +85,7 @@ namespace TepesOana_Lab2.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.PublishedBook", b =>
+            modelBuilder.Entity("LibraryModel.Models.PublishedBook", b =>
                 {
                     b.Property<int>("BookID")
                         .HasColumnType("int");
@@ -99,7 +100,7 @@ namespace TepesOana_Lab2.Migrations
                     b.ToTable("PublishedBook");
                 });
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.Publisher", b =>
+            modelBuilder.Entity("LibraryModel.Models.Publisher", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -120,30 +121,30 @@ namespace TepesOana_Lab2.Migrations
                     b.ToTable("Publisher");
                 });
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.Order", b =>
+            modelBuilder.Entity("LibraryModel.Models.Order", b =>
                 {
-                    b.HasOne("TepesOana_Lab2.Models.Book", "Book")
+                    b.HasOne("LibraryModel.Models.Book", "Book")
                         .WithMany("Orders")
                         .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TepesOana_Lab2.Models.Customer", "Customer")
+                    b.HasOne("LibraryModel.Models.Customer", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TepesOana_Lab2.Models.PublishedBook", b =>
+            modelBuilder.Entity("LibraryModel.Models.PublishedBook", b =>
                 {
-                    b.HasOne("TepesOana_Lab2.Models.Book", "Book")
+                    b.HasOne("LibraryModel.Models.Book", "Book")
                         .WithMany("PublishedBooks")
                         .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TepesOana_Lab2.Models.Publisher", "Publisher")
+                    b.HasOne("LibraryModel.Models.Publisher", "Publisher")
                         .WithMany("PublishedBooks")
                         .HasForeignKey("PublisherID")
                         .OnDelete(DeleteBehavior.Cascade)

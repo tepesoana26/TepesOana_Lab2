@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using TepesOana_Lab2.Models;
 
-namespace TepesOana_Lab2.Data
+namespace LibraryModel.Models
 {
     public class LibraryContext:DbContext
     {

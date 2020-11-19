@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TepesOana_Lab2.Data;
-using TepesOana_Lab2.Models;
+using LibraryModel.Models;
 
 namespace TepesOana_Lab2.Controls
 {
