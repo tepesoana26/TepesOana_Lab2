@@ -1,6 +1,6 @@
 using System;
 
-namespace TepesOana_Lab2.Models
+namespace LibraryModel.Models
 {
     public class ErrorViewModel
     {

@@ -5,7 +5,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TepesOana_Lab2.Models
+namespace LibraryModel.Models
 {
     public class Book
     {
