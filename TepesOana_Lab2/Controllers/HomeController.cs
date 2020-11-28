@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LibraryModel.Models;
 using Microsoft.EntityFrameworkCore;
-using LibraryModel.Models;
 using LibraryModel.Models.LibraryViewModels;
 
 namespace TepesOana_Lab2.Controllers
@@ -53,6 +52,10 @@ namespace TepesOana_Lab2.Controllers
                 BookCount = dateGroup.Count()
             };
             return View(await data.AsNoTracking().ToListAsync());
+        }
+        public IActionResult Chat()
+        {
+            return View();
         }
     }
 }
